@@ -1,0 +1,7 @@
+Company Name,Emissions Reporting Year,Emissions Report URL,EBITDA Report URL,Scope One Emissions,Scope Two Emissions,Scope Three Emissions,Total Emissions,Total Scope 1 & 2 Emissions,Monetized Scope 1 & 2 Emissions,Monetized Total Emissions,EBITDA,EBITDA Minus Total Monetized Emissions,Emissions Intensity Ratio,Emissions Intensity Percentage
+BP,2023,"
+https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/sustainability/group-reports/bp-esg-datasheet-2023.pdf","https://www.macrotrends.net/stocks/charts/BP/bp/ebitda#:~:text=BP%202022%20EBITDA%20was%2032.357,a%201.61%25%20decline%20from%202021",31.1,1.0,315.0,347.1,32.1,7575600000.0,81915600000.0,32360000000.0,-49555600000.0,2.5313844252163165,253.13844252163165
+Exxon,2023,,,92.0,7.0,540.0,639.0,99.0,23364000000.0,150804000000.0,102590000000.0,-48214000000.0,1.4699678331221366,146.99678331221367
+Alphabet Inc,2023,,,0.13,2.3,15.0,17.43,2.4299999999999997,573479999.9999999,4113479999.9999995,123110000000.0,118996520000.0,0.033413045244090646,3.3413045244090647
+Microsoft,2023,https://www.statista.com/statistics/579993/greenhouse-gas-emissions-of-microsoft-by-type/,https://www.microsoft.com/en-us/investor/annual-reports,0.16,1.2,11.0,12.36,1.3599999999999999,320960000.0,2916960000.0,83410000000.0,80493040000.0,0.03497134636134756,3.4971346361347564
+ExxonMobil,2023,,,92.0,7.0,540.0,639.0,99.0,23364000000.0,150804000000.0,102590000000.0,-48214000000.0,1.4699678331221366,146.99678331221367
