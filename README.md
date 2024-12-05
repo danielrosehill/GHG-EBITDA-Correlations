@@ -1,5 +1,7 @@
 # GHG-EBITDA Correlation Analysis
 
+![alt text](screenshots/1.png)
+
 [![View on Streamlit](https://img.shields.io/badge/View%20on-Streamlit-brightgreen)](https://ghgexplorer.streamlit.app/)
 
 ### Purpose
@@ -20,6 +22,15 @@ The emissions intensity ratio is calculated by comparing the monetized emissions
 ### Monetization Methodology
 The monetization of emissions is carried out at a rate of **$236 per metric ton of CO2 equivalents**, as recommended by the International Foundation for Valuing Impacts (IFVI). 
 
+## Screenshots
+
+![alt text](screenshots/1.png)
+
+![alt text](screenshots/2.png)
+
+![alt text](screenshots/3.png)
+
+![alt text](screenshots/4.png)
 
 ## Author
 
