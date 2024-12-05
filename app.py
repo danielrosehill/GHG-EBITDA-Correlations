@@ -31,28 +31,49 @@ st.title('Monetized Emissions Data Explorer')
 # Create columns for layout
 col1, col2 = st.columns([2, 1])
 
+# Chart selection
+chart_type = st.selectbox('Choose a chart to display', ['Financial Impact of Emissions', 'Monetized Emissions by Scope'])
+
 # Graph
 with col1:
-    st.subheader('Financial Impact of Emissions')
-    fig, ax = plt.subplots(figsize=(10, 6))
+    if chart_type == 'Financial Impact of Emissions':
+        st.subheader('Financial Impact of Emissions')
+        fig, ax = plt.subplots(figsize=(10, 6))
 
-    ebitda = company_data['EBITDA'] / 1_000_000_000
-    ebitda_after_emissions = company_data['EBITDA Minus Total Monetized Emissions'] / 1_000_000_000
-    monetized_emissions = company_data['Monetized Total Emissions'] / 1_000_000_000
+        ebitda = company_data['EBITDA'] / 1_000_000_000
+        ebitda_after_emissions = company_data['EBITDA Minus Total Monetized Emissions'] / 1_000_000_000
+        monetized_emissions = company_data['Monetized Total Emissions'] / 1_000_000_000
 
-    ax.bar(['EBITDA', 'EBITDA after emissions', 'Monetized emissions'], 
-           [ebitda, ebitda_after_emissions, monetized_emissions], 
-           color=['blue', 'green', 'red'])
+        ax.bar(['EBITDA', 'EBITDA after emissions', 'Monetized emissions'], 
+               [ebitda, ebitda_after_emissions, monetized_emissions], 
+               color=['blue', 'green', 'red'])
 
-    ax.set_ylabel('Billions of USD')
-    ax.set_title(f'Financial Impact of Emissions for {selected_company}')
-    st.pyplot(fig)
+        ax.set_ylabel('Billions of USD')
+        ax.set_title(f'Financial Impact of Emissions for {selected_company}')
+        st.pyplot(fig)
+
+    elif chart_type == 'Monetized Emissions by Scope':
+        st.subheader('Monetized Emissions by Scope')
+        fig, ax = plt.subplots(figsize=(10, 6))
+
+        monetized_scope_1_2 = company_data['Monetized Scope 1 & 2 Emissions'] / 1_000_000_000
+        monetized_all_scopes = company_data['Monetized Total Emissions'] / 1_000_000_000
+        monetized_scope_3 = company_data['Scope Three Emissions'] * 236 * 1_000_000 / 1_000_000_000  # Assuming monetization rate of $236 per ton
+        ebitda = company_data['EBITDA'] / 1_000_000_000
+
+        ax.bar(['Monetized Scope 1&2', 'All Scopes Monetized', 'Scope 3 Monetized', 'EBITDA'], 
+               [monetized_scope_1_2, monetized_all_scopes, monetized_scope_3, ebitda], 
+               color=['purple', 'orange', 'cyan', 'blue'])
+
+        ax.set_ylabel('Billions of USD')
+        ax.set_title(f'Monetized Emissions by Scope for {selected_company}')
+        st.pyplot(fig)
 
 # Emissions Intensity
 with col2:
     st.subheader('Emissions Intensity')
     st.metric(label='Emissions Intensity Ratio', value=f'{company_data["Emissions Intensity Ratio"]:.2f}')
-    st.metric(label='Emissions Intensity Percentage', value=f'{company_data["Emissions Intensity Percentage"]:.2f}%')
+    st.markdown('**Note**: Emissions Intensity = Monetized Total Emissions / EBITDA')
 
 # Data Table
 st.subheader('Company Data')
