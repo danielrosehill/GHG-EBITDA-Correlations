@@ -124,10 +124,6 @@ st.sidebar.markdown(
 )
 
 st.sidebar.markdown(
-    "[![GHG Emissions Calculator](https://img.shields.io/badge/GHG%20Emissions-Calculator-green?style=for-the-badge&logo=streamlit)](https://ghgemissionscalculator.streamlit.app/)"
-)
-
-st.sidebar.markdown(
     "[![Value Factors Visualization](https://img.shields.io/badge/Value%20Factors-Visualization-blue?style=for-the-badge&logo=streamlit)](https://valuefactorsddatavis.streamlit.app/)"
 )
 
