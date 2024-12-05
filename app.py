@@ -60,6 +60,7 @@ st.subheader('Company Data')
 # Monetized Emissions Data
 monetized_emissions_data = {
     'Monetized Scope 1 & 2 Emissions': format_currency(company_data['Monetized Scope 1 & 2 Emissions']),
+    'Monetized Scope 3 Emissions': format_currency(company_data['Scope Three Emissions'] * 236 * 1_000_000),  # Assuming monetization rate of $236 per ton
     'Monetized Total Emissions': format_currency(company_data['Monetized Total Emissions']),
 }
 
@@ -84,6 +85,12 @@ ebitda_df = pd.DataFrame({
 data_table = pd.concat([monetized_emissions_df, ebitda_df], axis=1)
 
 st.table(data_table)
+
+# CSV Row
+st.subheader('CSV Row')
+csv_row = ','.join([str(company_data[col]) for col in data.columns])
+csv_row_with_header = ','.join(data.columns) + '\n' + csv_row
+st.text_area(label='Copy CSV Row', value=csv_row_with_header, height=100)
 
 # Notes Section
 st.sidebar.markdown('## Notes')
