@@ -115,6 +115,15 @@ st.text_area(label='Copy CSV Row', value=csv_row_with_header, height=100)
 
 # Notes Section
 st.sidebar.markdown('## Notes')
+st.sidebar.markdown(
+    "[![Repository Home](https://img.shields.io/badge/Repository-Home-blue?style=for-the-badge&logo=github)](https://github.com/danielrosehill/GHG-EBITDA-Correlations)"
+)
+
+st.sidebar.markdown(
+    "[![GHG Emissions Calculator](https://img.shields.io/badge/GHG%20Emissions-Calculator-green?style=for-the-badge&logo=streamlit)](https://ghgemissionscalculator.streamlit.app/)"
+)
 st.sidebar.markdown('**Developed by Daniel Rosehill** ([danielrosehill.com](http://danielrosehill.com))')
 st.sidebar.markdown('**Monetization Rate**: $236 per ton of CO2 equivalents, as recommended by the International Foundation for Valuing Impact (IFVI).')
+st.sidebar.markdown('**Methodology**: To ensure comparability between industries using different units of measurement, emissions reporting was standardised on millions of tonnes of carbon dioxide equivalents. Wherever possible, data was derived from primary sources. Data sources are listed in the CSV.')
 st.sidebar.markdown('**Disclaimer**: While every effort was made to ensure data accuracy, no legal warranty is offered.')
+
