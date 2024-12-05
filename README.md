@@ -1,8 +1,10 @@
 # GHG-EBITDA Correlation Analysis
 
+[![View on Streamlit](https://img.shields.io/badge/View%20on-Streamlit-brightgreen)](https://ghgexplorer.streamlit.app/)
+
 ![alt text](screenshots/1.png)
 
-[![View on Streamlit](https://img.shields.io/badge/View%20on-Streamlit-brightgreen)](https://ghgexplorer.streamlit.app/)
+![alt text](screenshots/5.png)
 
 ### Purpose
 This GitHub repository is designed to house data derived from publicly available sources. The primary focus is on listing Scope 1, 2, and 3 greenhouse gas (GHG) emissions for various publicly traded companies. Additionally, it provides a comparison of the estimated total monetized emissions against the companies' **EBITDA** (Earnings Before Interest, Taxes, Depreciation, and Amortization).
