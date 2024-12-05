@@ -122,6 +122,15 @@ st.sidebar.markdown(
 st.sidebar.markdown(
     "[![GHG Emissions Calculator](https://img.shields.io/badge/GHG%20Emissions-Calculator-green?style=for-the-badge&logo=streamlit)](https://ghgemissionscalculator.streamlit.app/)"
 )
+
+st.sidebar.markdown(
+    "[![GHG Emissions Calculator](https://img.shields.io/badge/GHG%20Emissions-Calculator-green?style=for-the-badge&logo=streamlit)](https://ghgemissionscalculator.streamlit.app/)"
+)
+
+st.sidebar.markdown(
+    "[![Value Factors Visualization](https://img.shields.io/badge/Value%20Factors-Visualization-blue?style=for-the-badge&logo=streamlit)](https://valuefactorsddatavis.streamlit.app/)"
+)
+
 st.sidebar.markdown('**Developed by Daniel Rosehill** ([danielrosehill.com](http://danielrosehill.com))')
 st.sidebar.markdown('**Monetization Rate**: $236 per ton of CO2 equivalents, as recommended by the International Foundation for Valuing Impact (IFVI).')
 st.sidebar.markdown('**Methodology**: To ensure comparability between industries using different units of measurement, emissions reporting was standardised on millions of tonnes of carbon dioxide equivalents. Wherever possible, data was derived from primary sources. Data sources are listed in the CSV.')
